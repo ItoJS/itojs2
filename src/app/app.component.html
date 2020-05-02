@@ -6,6 +6,9 @@
 <app-top-bar></app-top-bar>
 
 
+<h4>{{recommended}}</h4>
+<img [src]="itemImageUrl2">
+
 
 <div class="container">
   <router-outlet></router-outlet>
@@ -14,6 +17,16 @@
 
 <!-- "The sum of 1 + 1 is 2" -->
 <p>The sum of 1 + 1 is {{1 + 1}}.</p>
+
+
+
+<!-- "The sum of 1 + 1 is not 4" -->
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>
+
+
+<ul>
+  <li *ngFor="let customer of customers">{{customer.name}}</li>
+</ul>
 
 
 <!-- 
