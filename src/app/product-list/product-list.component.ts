@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { ProductAlerts } from '../products-alerts/product-alerts.component.ts';
 import { products } from '../products';
 
 @Component({

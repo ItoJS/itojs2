@@ -2,16 +2,17 @@
 <p>{{title}}</p>
 <div><img src="{{itemImageUrl}}"></div>
 
-
 <app-top-bar></app-top-bar>
 
+<h4>---Hi this is just a header4-{{recommended}}</h4>
 
-<h4>{{recommended}}</h4>
-<img [src]="itemImageUrl2">
 
+<label>Type something:
+  <input #customerInput>{{customerInput.value}}
+</label>
 
 <div class="container">
-  <router-outlet></router-outlet>
+  <router-outlet>ss___THIS IS A CONTAINER___ss</router-outlet>...this is the end.
 </div>
 
 
@@ -19,14 +20,16 @@
 <p>The sum of 1 + 1 is {{1 + 1}}.</p>
 
 
-
 <!-- "The sum of 1 + 1 is not 4" -->
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>
 
 
-<ul>
-  <li *ngFor="let customer of customers">{{customer.name}}</li>
-</ul>
+<div class="special">Plain old HTML</div>
+
+<button disabled>Save</button>
+
+<!-- Bind button disabled state to `isUnchanged` property -->
+<button [disabled]="isUnchanged">Save it!</button>
 
 
 <!-- 
